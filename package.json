@@ -1,0 +1,27 @@
+{
+  "name": "forecast-discussion",
+  "version": "1.0.0",
+  "description": "Fetch a plaintext weather forecast discussion from the NWS.",
+  "main": "src/index.mjs",
+  "scripts": {
+    "test": "vitest",
+    "start": "node src/index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noyesa/forecast-discussion.git"
+  },
+  "author": "Andrew Noyes <noyesa@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noyesa/forecast-discussion/issues"
+  },
+  "homepage": "https://github.com/noyesa/forecast-discussion#readme",
+  "devDependencies": {
+    "prettier": "^3.5.1",
+    "vitest": "^3.0.6"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
