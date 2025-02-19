@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+import process from 'node:process';
+
+import { fetchDiscussion } from '../src/index.mjs';
+
+const [forecastOffice] = process.argv.slice(2);
+
+if (typeof forecastOffice === 'string') {
+  fetchDiscussion(forecastOffice.toUpperCase());
+} else {
+  console.error('Please provide the three letter designation for a forecast office.');
+}
