@@ -5,6 +5,7 @@ import { MockServer } from 'mentoss';
 
 /**
  * Sets up a server with the NWS URL.
+ * @returns {MockServer} The mock server.
  */
 const getMockNWSServer = () => new MockServer('https://forecast.weather.gov');
 

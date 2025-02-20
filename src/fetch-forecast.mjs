@@ -28,7 +28,7 @@ export const createDiscussionURL = (forecastOfficeCode) =>
 /**
  * Fetches the forecast discussion from the NWS.
  * @param {string} forecastOfficeCode - The forecast office to fetch.
- * @returns {Object} The forecast discussion.
+ * @returns {Response} The forecast discussion response.
  */
 export const fetchDiscussion = (forecastOfficeCode) =>
   fetch(createDiscussionURL(forecastOfficeCode));
