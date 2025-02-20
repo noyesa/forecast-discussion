@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+import process from 'node:process';
+
+import { createDiscussionURL } from '../src/fetch-forecast.mjs';
+
+const args = process.argv.slice(2);
+const [forecastOfficeCode] = args;
+
+if (forecastOfficeCode) {
+  console.log(createDiscussionURL(forecastOfficeCode));
+}

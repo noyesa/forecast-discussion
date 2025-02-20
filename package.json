@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/noyesa/forecast-discussion#readme",
   "devDependencies": {
+    "mentoss": "^0.5.2",
     "prettier": "^3.5.1",
     "vitest": "^3.0.6"
   },
@@ -25,6 +26,7 @@
     "singleQuote": true
   },
   "bin": {
-    "forecast-discussion": "./bin/forecast-discussion"
+    "forecast-discussion": "./bin/forecast-discussion",
+    "forecast-discussion-url": "./bin/forecast-discussion-url"
   }
 }
