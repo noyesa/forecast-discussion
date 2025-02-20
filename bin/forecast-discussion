@@ -4,10 +4,15 @@ import process from 'node:process';
 
 import { fetchDiscussion } from '../src/index.mjs';
 
-const [forecastOffice] = process.argv.slice(2);
+const args = process.argv.slice(2);
+const [forecastOffice] = args;
 
-if (typeof forecastOffice === 'string') {
-  fetchDiscussion(forecastOffice.toUpperCase());
+if (forecastOffice) {
+  const response = await fetchDiscussion(forecastOffice);
+  const body = await response.text();
+  console.log(body);
 } else {
-  console.error('Please provide the three letter designation for a forecast office.');
+  console.error(
+    'Please provide the three letter designation for a forecast office.',
+  );
 }
