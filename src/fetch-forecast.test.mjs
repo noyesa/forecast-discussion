@@ -2,7 +2,7 @@ import { describe, it, expect, beforeAll, afterEach, afterAll } from 'vitest';
 import { FetchMocker } from 'mentoss';
 
 import { fetchDiscussion, createDiscussionURL } from './fetch-forecast.mjs';
-import { getMockServer } from '../test/mock-server.mjs';
+import { getMockServer } from '../test/mock.mjs';
 
 describe('fetchDiscussion', () => {
   let mocker;
