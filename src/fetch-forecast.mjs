@@ -30,5 +30,5 @@ export const createDiscussionURL = (forecastOfficeCode) =>
  * @param {string} forecastOfficeCode - The forecast office to fetch.
  * @returns {Response} The forecast discussion response.
  */
-export const fetchDiscussion = (forecastOfficeCode) =>
+export const fetchDiscussion = async (forecastOfficeCode) =>
   fetch(createDiscussionURL(forecastOfficeCode));

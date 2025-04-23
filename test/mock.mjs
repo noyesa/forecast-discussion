@@ -13,10 +13,15 @@ const getMockNWSServer = () => new MockServer('https://forecast.weather.gov');
  * Loads the mock response from file on disk.
  * @returns {string} The contents of the mock response.
  */
-const loadMockResponse = () =>
+export const loadMockHTML = () =>
   readFileSync(join(import.meta.dirname, 'example-discussion.html'), {
     encoding: 'utf8',
-  });
+  }).trim();
+
+export const loadMockDiscussion = () =>
+  readFileSync(join(import.meta.dirname, 'example-discussion.txt'), {
+    encoding: 'utf8',
+  }).trim();
 
 /**
  * Sets the server to respond with a mock response.
@@ -28,7 +33,7 @@ const setMockResponse = (server) => {
     headers: {
       'Content-Type': 'text/html',
     },
-    body: loadMockResponse(),
+    body: loadMockHTML(),
   });
 };
 
